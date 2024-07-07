@@ -10,7 +10,7 @@ There are numBottles water bottles that are initially full of water. You can exc
 The operation of drinking a full water bottle turns it into an empty bottle.
 Given the two integers numBottles and numExchange, return the maximum number of water bottles you can drink.
 """
-
+# Solution 1 with normal iteration
 class Solution:
     def numWaterBottles(self, numBottles: int, numExchange: int) -> int:
         counts = numBottles
@@ -19,4 +19,10 @@ class Solution:
            counts += temp
            numBottles = temp + numBottles % numExchange
         return counts
+# Solution 2 with O(1) time and space complexity.
+class Solution:
+    def numWaterBottles(self, numBottles: int, numExchange: int) -> int:
+        return numBottles + (numBottles-1)//(numExchange-1)
+         
+
         
