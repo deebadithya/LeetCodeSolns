@@ -9,7 +9,7 @@ Companies
 Hint
 A critical point in a linked list is defined as either a local maxima or a local minima.
 
-A node is a local maxima if the current node has a value strictly greater than the previous node and the next node.
+A node is a local maxima if the curnrent node has a value strictly greater than the previous node and the next node.
 
 A node is a local minima if the current node has a value strictly smaller than the previous node and the next node.
 

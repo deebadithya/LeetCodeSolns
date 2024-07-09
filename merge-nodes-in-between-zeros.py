@@ -24,3 +24,18 @@ class Solution:
                 add_ups = 0
             current = current.next
         return start.next
+    
+# Solution 2 [ Optimized ]
+
+class Solution:
+    def mergeNodes(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        current, add_ups = head, 0
+        while current.next:
+            if current.next.val:
+                add_ups += current.next.val
+                current.next = current.next.next
+            else:
+                current.next.val = add_ups  
+                add_ups = 0
+                current = current.next       
+        return head.next
