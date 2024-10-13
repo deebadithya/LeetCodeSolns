@@ -9,6 +9,7 @@ You have k lists of sorted integers in non-decreasing order. Find the smallest r
 We define the range [a, b] is smaller than range [c, d] if b - a < d - c or a < c if b - a == d - c.
 """
 from typing import List
+import heapq
 class Solution:
     def smallestRange(self, nums: List[List[int]]) -> List[int]:
         heap = []
