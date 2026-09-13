@@ -42,8 +42,10 @@ n == img2.length == img2[i].length
 1 <= n <= 30
 img1[i][j] is either 0 or 1.
 img2[i][j] is either 0 or 1.
-"""
 
+
+"""
+from typing import List
 class Solution:
     def largestOverlap(self, img1: List[List[int]], img2: List[List[int]]) -> int:
         A = [(i,j) for i in range(len(img1)) for j in range(len(img1)) if img1[i][j]==1]
